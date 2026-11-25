@@ -133,12 +133,12 @@
         { stt: 44, name: 'Lường Thị Thiệp', defaultRole: 'DANG_VIEN' },
         { stt: 45, name: 'Hà Ngọc Sơn', defaultRole: 'DANG_VIEN' },
         { stt: 46, name: 'Lường Thị Định', defaultRole: 'DANG_VIEN' },
-        { stt: 47, name: 'Quàng Văn Thảnh', defaultRole: 'DANG_VIEN' },
+        { stt: 47, name: 'Lò Văn Tươi', defaultRole: 'DANG_VIEN' },
         { stt: 48, name: 'Quàng Văn Công', defaultRole: 'DANG_VIEN' },
         { stt: 49, name: 'Lường Thị Thu', defaultRole: 'DANG_VIEN' },
         { stt: 50, name: 'Quàng Văn Tích', defaultRole: 'DANG_VIEN' },
         { stt: 51, name: 'Cà Thùy Dương', defaultRole: 'DANG_VIEN' },
-        { stt: 52, name: 'Cà Thị Duyên', defaultRole: 'DANG_VIEN' }
+        { stt: 52, name: 'Tòng Trọng Lực', defaultRole: 'DANG_VIEN' }
       ]
     }
   ];

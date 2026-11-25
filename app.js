@@ -715,11 +715,15 @@
       html += '<div class="table-scroll"><table class="official-table"><thead><tr>' +
         '<th>STT</th><th>Họ và tên</th><th>Tự nhận</th><th>Thao tác</th>' +
         '</tr></thead><tbody>';
+      const memberMap = {};
+      rep.members.forEach(function (m) { memberMap[m.id] = m; });
       rep.ballots.forEach(function (b) {
         const selfMeta = Data.getRatingMeta(b.selfRating);
+        const liveMember = memberMap[b.voterId];
+        const voterLabel = liveMember ? liveMember.displayName : b.voterDisplayName;
         html += '<tr>' +
           '<td class="text-center">' + b.voterStt + '</td>' +
-          '<td><strong>' + escHtml(b.voterDisplayName) + '</strong><div style="font-size:11.5px;color:#6b7280;">' + escHtml(Data.getRoleMeta(b.voterRole).label) + ' • ' + escHtml(formatTime(b.submittedAt)) + '</div></td>' +
+          '<td><strong>' + escHtml(voterLabel) + '</strong><div style="font-size:11.5px;color:#6b7280;">' + escHtml(Data.getRoleMeta(b.voterRole).label) + ' • ' + escHtml(formatTime(b.submittedAt)) + '</div></td>' +
           '<td class="text-center"><span class="badge ' + selfMeta.badgeClass + '">' + selfMeta.shortLabel + '</span></td>' +
           '<td class="text-center"><button type="button" class="btn btn-danger-outline btn-sm" data-action="unlock-vote" data-member-id="' + escHtml(b.voterId) + '">Mở khóa</button></td>' +
           '</tr>';
